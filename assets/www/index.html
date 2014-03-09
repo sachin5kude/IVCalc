@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>IVCalc</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="lib/jquery-1.6.4.js"></script>
+        <script src="lib/jquery.mobile-1.1.0.js"></script>
+        <script src="cordova-1.9.0.js"></script>
+        <script src="src/app.js"></script>
+        <link href="src/css/jquery.mobile.structure-1.1.0.css" rel="stylesheet">
+        <link href="src/css/jquery.mobile.theme-1.1.0.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <div data-role="page" id="page1" data-theme="c">
+            <div data-role="header" data-position="fixed" data-theme="b">
+                <h1>IVCalc</h1>
+            </div>
+            <div data-role="content" id="divContent">
+                <div data-role="fieldcontain">
+                    <label for="txtUnderlyingPrice">Underlying Price</label>
+                    <input type="number" id="txtUnderlyingPrice" placeholder="Underlying Price" value="5258.25"  >
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="txtExercisePrice">Exercise Price</label>
+                    <input type="number" id="txtExercisePrice" placeholder="Exercise Price" value="5200" >
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="txtOptionRate">Option Rate</label>
+                    <input type="number" id="txtOptionRate" placeholder="Option Rate" value="45" >
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="txtDays">Days to Expiry</label>
+                    <input type="number" id="txtDays" placeholder="Days to Expiry" value="14" >
+                </div>
+                <div  data-role="fieldcontain">
+                    <label for="txtInterestRate">Interest Rate</label>
+                    <input type="number" id="txtInterestRate" placeholder="Interest Rate"
+                    value="0" >
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="txtDividend">Dividend</label>
+                    <input type="number" id="txtDividend" placeholder="Dividend" value="0" >
+                </div>
+            </div>
+            
+            <div data-role="content" id="divVol"  style="display:none">
+                <div data-role="fieldcontain">
+                    <label for="txtCallVol">Call Vol</label>
+                    <input type="number" id="txtCallVol" placeholder="Call Vol" value="0" >
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="txtCallVol">Put Vol</label>
+                    <input type="number" id="txtPutVol" placeholder="Put Vol" value="0" >
+                </div>
+                
+            </div>
+            
+            <div data-role="footer" data-position="fixed" data-theme="b">
+                <div data-role="navbar" data-iconpos="left">
+                    <ul>
+                        <li>
+                            <a id="btnCalculate" data-role="button" data-theme="a" onClick="calculate();" value="1">Calculate</a>
+                        </li> 
+                        <li>
+                            <a id="btnClear" data-role="button" data-theme="a" onClick="cleardata()" style="display:none" >Back</a>
+                        </li>
+                        <!--<li>
+                            <a data-role="button" data-theme="a" style="">Back</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
